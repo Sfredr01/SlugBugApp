@@ -1,5 +1,8 @@
+function changePage(id){
+    document.location.href = id;
+} 
+
 function grabMessageInfo() {
-    var message = document.getElementById('message');
     var messageValue = message.value;
     message.value = '';
     return messageValue;
@@ -25,9 +28,12 @@ function populatePage(object) {
     var card = document.createElement("div");
     var text = document.createTextNode(object.user + ': ' + object.message);
     card.appendChild(text);
-    card.id = 'card';
+    card.className = 'card';
     if(object.user === sessionStorage.getItem('username')) {
-        card.className = 'right';
+        card.className += ' right';
+    }
+    if(object.user === "sfredr") {
+        card.className += ' adminCard';
     }
     element.appendChild(card);
 }
@@ -42,13 +48,11 @@ function sendMessage(message) {
         if(arrayOfMessages !== null) {
         length = arrayOfMessages.length;
         } else { length = 0; }
-        console.log(length);
     }).then( () => {
     firebase.database().ref('messages/' + (length)).set({
         user: sessionStorage.getItem('username'),
         message,
     });
-    console.log('Message Sent');
     getMessages();
     });
 }

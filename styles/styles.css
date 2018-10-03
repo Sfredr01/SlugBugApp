@@ -54,6 +54,24 @@
     background-image: linear-gradient(grey, grey);
 }
 
+.addButton {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    border: black solid 4px;
+    font-size: 1vw;
+    white-space: nowrap;
+    border-radius: 150px;
+    box-shadow: 10px 10px 5px grey;
+    background-image: linear-gradient(white, grey);
+    margin-top: 3vh;
+    margin-left: 21vw;
+}
+
+.addButton:active {
+    background-image: linear-gradient(grey, grey);
+}
+
 .cardWords {
     justify-content: center;
     font-size: 4vw;

@@ -25,20 +25,26 @@
           var messages = firebase.database().ref('messages');
 
           messages.on('child_added', () => { getMessages(); });
+
         </script>
         <meta name="viewport" content="user-scalable=no" />
     </head>
 
     <body id="body" onload="getMessages();">
-        <div id="messageList">
-
+        <div id="backButtonDiv">
+          <button onclick="changePage('../index.html')">
+            <img id="backButton" src="../images/backButton.png" alt="backButton">
+          </button>
         </div>
-        <div class='flexContainer contentCenter'>
+        <div id="messageList">
+            
+        </div>
+        <div class="flexContainer">
             <form class="bigText">
-                Message: <input class="bigSize" type="text" id="message"><br>
+                <input class="bigSize" type="text" id="message" placeholder="Message..">
             </form>
             <div id="formButtons">
-                <button class="bigText button" onclick="submitButton()">SUBMIT</button>
+                <button id="submit" class="bigText button" onclick="submitButton()">SUBMIT</button>
             </div>
         </div>
     </body>
