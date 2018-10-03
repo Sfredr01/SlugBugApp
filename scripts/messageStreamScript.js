@@ -1,6 +1,8 @@
 function grabMessageInfo() {
-    var message = document.getElementById('message').value;
-    return message;
+    var message = document.getElementById('message');
+    var messageValue = message.value;
+    message.value = '';
+    return messageValue;
 }
 
 function getMessages() {

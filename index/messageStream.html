@@ -21,22 +21,26 @@
           };
           firebase.initializeApp(config);
           var database = firebase.database();
+
+          var messages = firebase.database().ref('messages');
+
+          messages.on('child_added', () => { getMessages(); });
         </script>
         <meta name="viewport" content="user-scalable=no" />
     </head>
 
-    <body id="body" onload="getMessages()">
-        <form class="bigText">
-            Message: <input class="bigSize" type="text" id="message"><br>
-        </form>
-        <div id="formButtons">
-            <button class="bigText button" onclick="submitButton()">SUBMIT</button>
-            <!-- <button class="bigText button" onclick="getMessages()">POPULATE</button> -->
-        </div>
+    <body id="body" onload="getMessages();">
         <div id="messageList">
 
         </div>
-
+        <div class='flexContainer contentCenter'>
+            <form class="bigText">
+                Message: <input class="bigSize" type="text" id="message"><br>
+            </form>
+            <div id="formButtons">
+                <button class="bigText button" onclick="submitButton()">SUBMIT</button>
+            </div>
+        </div>
     </body>
 
 </html>
