@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Slug Bug Application</title>
+        <link href="../styles/loginFormStyling.css" rel="stylesheet">
+        <script src="../scripts/loginFormScript.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCUlfU1AT_LpFwOSX7A0V2Ca5pgVAn5V9Y",
+            authDomain: "slugbugapp.firebaseapp.com",
+            databaseURL: "https://slugbugapp.firebaseio.com",
+            projectId: "slugbugapp",
+            storageBucket: "slugbugapp.appspot.com",
+            messagingSenderId: "745781045440"
+          };
+          firebase.initializeApp(config);
+          var database = firebase.database();
+        </script>
+        <meta name="viewport" content="user-scalable=no" />
+    </head>
+
+    <body id="body">
+        <div id="loginForm">
+            <div>
+                <form class="bigText">
+                    Username: <input class="bigSize" type="text" id="username"><br>
+                    Name: <input class="bigSize" type="text" id="name"><br>
+                    Email: <input class="bigSize" type="text" id="email"><br>
+                </form>
+            </div>
+
+            <div id="formButtons">
+                <button class="bigText button" onclick="grabUserInfo()">SUBMIT</button>
+            </div>
+        </div>
+
+        <button class="bigText button" onclick="readUserData()">READ</button>
+
+        <div id="messageList">
+
+        </div>
+    </body>
+
+</html>

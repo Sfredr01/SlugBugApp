@@ -1,0 +1,40 @@
+<!doctype html>
+<html id="mainHTML">
+    <head>
+        <title>Slug Bug Application</title>
+        <link href="./styles/styles.css" rel="stylesheet">
+        <script src="./scripts/script.js"></script>
+        <meta name="viewport" content="user-scalable=no" />
+    </head>
+    <body onload="checkLoginStatus()">
+        <h1 id="titleText">Slug Bug App</h1>
+        <div class="cardList horizontalFlex">
+            <div class="verticalFlex">
+                <button onclick="changePage('messageStream.html')" class="card">
+                    <div class="cardWords">
+                        Live Feed (WIP)
+                    </div>
+                </button>
+                <button class="card">
+                    <div class="cardWords">
+                        Leadboard (WIP)
+                    </div>
+                </button>
+            </div>
+
+            <div class="verticalFlex">
+                <button class="card">
+                    <div class="cardWords">
+                        Profile (WIP)
+                    </div>
+                </button>
+                <button class="card">
+                    <div class="cardWords">
+                        Rules (WIP)
+                    </div>
+                </button> 
+            </div>
+        </div>
+        <img id="mainImg" src="./images/beetle.png" alt="slugbug">
+    </body>
+</html>

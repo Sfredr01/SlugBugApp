@@ -1,0 +1,36 @@
+#card {
+    border: black solid 5px;
+    font-size: 5vw;
+    width: 35vw;
+    white-space: pre-wrap;
+    margin-top: 2vh;
+    padding: 10px;
+}
+
+#messageList {
+    margin-top: 1vh;
+}
+
+.right {
+    margin-left: 60vw;
+}
+
+.left {
+    margin-left: 5vw;
+}
+
+.bigText {
+    font-size: 6vw;
+}
+
+.bigSize {
+    width: 450px;
+    height: 50px;
+    border: black solid 5px;
+    font-size: 50px;
+}
+
+.button {
+    border: black solid 3px;
+    margin-top: 2vh;
+}
