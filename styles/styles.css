@@ -65,7 +65,7 @@
     box-shadow: 10px 10px 5px grey;
     background-image: linear-gradient(white, grey);
     margin-top: 3vh;
-    margin-left: 21vw;
+    margin-left: 17vw;
 }
 
 .addButton:active {
@@ -74,6 +74,6 @@
 
 .cardWords {
     justify-content: center;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 

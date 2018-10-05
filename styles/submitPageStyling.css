@@ -1,0 +1,31 @@
+body {
+    background-color: grey;
+}
+
+#imageSelection {
+    font-size: 3vw;
+}
+
+#backButtonDiv {
+    background-color: grey;
+    margin-bottom: -10px;
+}
+
+#backButton {
+    width: 15vw;
+}
+
+.fileButton {
+    margin-left: 30vw;
+    width: 38vw;
+    font-size: 5vw;
+    background-color: white;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.bigText {
+    font-size: 5vw;
+}

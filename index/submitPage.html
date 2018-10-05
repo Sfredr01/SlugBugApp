@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Slug Bug Application</title>
+        <link href="../styles/submitPageStyling.css" rel="stylesheet">
+        <script src="../scripts/submitPageScript.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCUlfU1AT_LpFwOSX7A0V2Ca5pgVAn5V9Y",
+            authDomain: "slugbugapp.firebaseapp.com",
+            databaseURL: "https://slugbugapp.firebaseio.com",
+            projectId: "slugbugapp",
+            storageBucket: "slugbugapp.appspot.com",
+            messagingSenderId: "745781045440"
+          };
+          firebase.initializeApp(config);
+          var database = firebase.database();
+        </script>
+        <meta name="viewport" content="user-scalable=no" />
+    </head>
+
+    <body>
+        <div id="backButtonDiv">
+            <button onclick="changePage('../index.html')">
+                <img id="backButton" src="../images/backButton.png" alt="backButton">
+            </button>
+        </div>
+            <h1 class="centerText bigText">Submission Screen</h1>
+        <div>
+            <button class="fileButton">
+                +
+                <input id="imageSelection" type="file" accept="image/*" />
+            </button>
+                
+            
+        </div>
+        <button onclick="sendImage();">
+            <div style="font-size: 4vw;">
+                SUBMIT
+            </div>
+        </button>
+    </body>
+
+</html>
