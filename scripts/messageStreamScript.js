@@ -12,29 +12,21 @@ function getMessages() {
     firebase.database().ref('livefeed/').once('value').then(function(snapshot) {
         var messages = snapshot.val();
         var element = document.getElementById('messageList');
-        while (element.firstChild) {
-            element.removeChild(element.firstChild);
-        }
-        if (messages !== null) {
-        messages.forEach(element => {
-            populatePage(element);
+            while (element.firstChild) {
+                element.removeChild(element.firstChild);
+            }
+            if (messages !== null) {
+            messages.forEach(element => {
+                populatePage(element);
         });
-      }
-    });
-}
-
-function getMessages() {
-    firebase.database().ref('livefeed/').once('value').then(function(snapshot) {
-        var messages = snapshot.val();
-        var element = document.getElementById('messageList');
-        while (element.firstChild) {
-            element.removeChild(element.firstChild);
+            } else {
+                var object = {
+                    user: 'Console',
+                    message: 'No Messages! Send one!',
+                    type: 'message',
+                }
+                populatePage(object);
         }
-        if (messages !== null) {
-        messages.forEach(element => {
-            populatePage(element);
-        });
-      }
     });
 }
 
@@ -74,7 +66,7 @@ function populatePage(object) {
     if(object.user === sessionStorage.getItem('username')) {
         card.className += ' right';
     }
-    
+
     pointContainer.className = "pointContainer";
     userContainer.className = "userContainer";
 

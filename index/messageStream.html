@@ -22,9 +22,11 @@
           firebase.initializeApp(config);
           var database = firebase.database();
 
-          var messages = firebase.database().ref('messages');
+          var livefeed = firebase.database().ref('livefeed');
 
-          messages.on('child_added', () => { getMessages(); });
+          livefeed.on('child_added', () => { 
+              getMessages(); 
+              });
 
         </script>
         <meta name="viewport" content="user-scalable=no" />
@@ -37,7 +39,9 @@
           </button>
         </div>
         <div id="messageList">
-            
+            <div>
+                <img id="loadingImage" src="../images/loadingImage.gif">
+            </div>
         </div>
         <div class="flexContainer">
             <form class="bigText">

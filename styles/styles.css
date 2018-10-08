@@ -18,7 +18,7 @@
 
 #mainImg {
     margin-top: 6vh;
-    margin-left: 8vw;
+    margin-left: 15vw;
 }
 
 .cardList {
@@ -41,7 +41,7 @@
     padding: 50px;
     font-size: 1vw;
     white-space: nowrap;
-    margin-left: 2vw;
+    margin-left: 6vw;
     margin-top: 7vw;
     width: 35vw;
     justify-content: center;
@@ -65,7 +65,7 @@
     box-shadow: 10px 10px 5px grey;
     background-image: linear-gradient(white, grey);
     margin-top: 3vh;
-    margin-left: 17vw;
+    margin-left: 28vw;
 }
 
 .addButton:active {

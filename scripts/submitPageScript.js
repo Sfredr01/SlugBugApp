@@ -1,29 +1,30 @@
+window.onload = () => {
+    document.getElementById('input').onchange = showPreview;
+}
+
 function changePage(id){
     document.location.href = id;
 } 
 
-function sendImage() {
-    var fileInput = document.getElementById('imageSelection').files[0];
-
+function submitImage() {
+    var fileInput = document.getElementById('input').files[0];
     var reader = new FileReader();
 
     reader.onload = function () {
-        var object = {
-            height: 100,
+        object = {
             title: fileInput.name,
             src: this.result,
         }
       if(fileInput !== null){
         sendMessage(object);
+        alert('Submitted');
       }
     }
-
     reader.readAsDataURL(fileInput);
 }
 
-var length;
-
-function sendMessage(image) {    
+function sendMessage(image) {   
+    var length; 
     firebase.database().ref('livefeed/').once('value')
     .then(function(snapshot) {
         var arrayOfImage = snapshot.val();
@@ -37,8 +38,32 @@ function sendMessage(image) {
         type: 'submittion',
         user: sessionStorage.getItem('username'),
         image: image,
-        points: 0,
+        points: 1,
     });
-    console.log('sent');
+    console.log('submitted!');
+    changePage('../index.html');
   });
+}
+
+function showPreview() {
+    var element = document.getElementById('imageBox');
+    element.hidden = false;
+    if(element.hasChildNodes){
+        element.removeChild(element.firstChild);
+    }
+    var fileInput = document.getElementById('input').files[0];
+    var reader = new FileReader();
+    reader.onload = function () {
+        object = {
+            title: fileInput.name,
+            src: this.result,
+        }
+      if(fileInput !== null){
+        var img = document.createElement("img");
+        img.src = object.src;
+        img.style = "width: 40vw; margin-left: 5vw; margin-top: 3vh; border-radius: 10px;"
+        element.appendChild(img);
+      }
+    }
+    reader.readAsDataURL(fileInput);
 }

@@ -29,21 +29,17 @@
         <div id="loginForm">
             <div>
                 <form class="bigText">
-                    Username: <input class="bigSize" type="text" id="username"><br>
-                    Name: <input class="bigSize" type="text" id="name"><br>
-                    Email: <input class="bigSize" type="text" id="email"><br>
+                    <div style="display: flex; flex-direction:column; margin-top: 2vh; margin-bottom: 2vh;">
+                    Username: <input class="bigSize" type="text" id="username">
+                    Password: <input class="bigSize" type="password" id="password">
+                    </div>
                 </form>
             </div>
 
-            <div id="formButtons">
-                <button class="bigText button" onclick="grabUserInfo()">SUBMIT</button>
+            <div id="formButtons" style="margin-left: 7vw; margin-top: 3.8vh;">
+                <button class="bigText button" onclick="registerUser()">Register</button>
+                <button class="bigText button" onclick="loginUser()">Login</button>
             </div>
-        </div>
-
-        <!-- <button class="bigText button" onclick="readUserData()">READ</button> -->
-
-        <div id="messageList">
-
         </div>
     </body>
 

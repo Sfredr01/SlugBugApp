@@ -15,6 +15,31 @@ body {
     width: 15vw;
 }
 
+#uploadButton {
+    font-size: 5vw; 
+    background-color: white;
+    padding: 10px;
+    margin-left: 33vw;
+}
+
+#submitButton {
+    font-size: 6vw; 
+    border: solid black 3px; 
+    padding: 10px;
+    margin-top: 2vh;
+    margin-left: 38vw;
+    background-color: white;
+}
+
+#imageBox {
+    margin-top: 3vh;
+    margin-left: 23vw;
+    border: solid black 3px;
+    height: 23vh;
+    width: 50vw;
+    background-color: white;
+}
+
 .fileButton {
     margin-left: 30vw;
     width: 38vw;

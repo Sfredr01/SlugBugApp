@@ -1,12 +1,20 @@
 body {
-    background-color: grey;
+    background-image: linear-gradient(lightblue, lightgreen);
+}
+
+#loadingImage {
+    margin-left: 15vw;
+    margin-top: 10vh;
+    width: 60vw;
 }
 
 #messageList {
-    height: 82vh;
+    height: 62vh;
     overflow: scroll;
     padding-left: 2vw;
     padding-right: 2vw;
+    border: solid black 4px;
+    background-color: grey;
 }
 
 #message {
@@ -16,7 +24,7 @@ body {
 }
 
 #backButtonDiv {
-    background-color: grey;
+    background-image: linear-gradient(lightblue, lightgreen);
     margin-bottom: -10px;
 }
 
@@ -52,6 +60,7 @@ body {
 
 .flexContainer {
     display: flex;
+    padding-bottom: 4vh;
 }
 
 .right {
