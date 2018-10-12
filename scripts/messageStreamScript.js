@@ -55,10 +55,11 @@ function populatePage(object) {
     var userText = document.createTextNode(object.user);
 
     userButton.onclick= () => {previewUser(object.user)};
-    userButton.style="font-size: 4vw;";
+    userButton.style="font-size: 4vw; background-color: white; border:none;";
     userButton.appendChild(userText);
     userContainer.appendChild(userButton);
 
+    imgButton.style = "margin-left: 7vw; background-color: white; border:none;";
     imgButton.appendChild(img);
     
     var trigger = true;

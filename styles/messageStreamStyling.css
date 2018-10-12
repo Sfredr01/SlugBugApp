@@ -29,6 +29,7 @@ body {
 
 #backButton {
     width: 15vw;
+    background-color: #93BFC6;
 }
 
 #profilePreview {
@@ -74,7 +75,6 @@ body {
 }
 
 .imgStyle {
-    margin-left: 7vw;
     border-radius: 200px;
     width: 200px;
 }
