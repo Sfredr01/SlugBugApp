@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(lightblue, lightgreen);
+    background-color: #93BFC6;
 }
 
 #loadingImage {
@@ -10,7 +10,7 @@ body {
 
 #messageList {
     height: 62vh;
-    overflow: scroll;
+    overflow: auto;
     padding-left: 2vw;
     padding-right: 2vw;
     border: solid black 4px;
@@ -24,12 +24,44 @@ body {
 }
 
 #backButtonDiv {
-    background-image: linear-gradient(lightblue, lightgreen);
     margin-bottom: -10px;
 }
 
 #backButton {
     width: 15vw;
+}
+
+#profilePreview {
+    display: none;
+    position:absolute; 
+    top: 15vh;
+    left: 12.5vw;
+    height: 50vh;
+    font-size: 10vw; 
+    background-color: white;
+    border: solid black 3px;
+    width: 75vw;
+}
+
+#profileFlexContainer {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#profileUser {
+    font-size: 6vw;
+}
+
+#profilePoints {
+    font-size: 5vw;
+}
+
+#profilePic {
+    width: 45vw;
 }
 
 .userContainer {
@@ -50,7 +82,6 @@ body {
 .card {
     border: black solid 2px;
     font-size: 5vw;
-    width: 35vw;
     white-space: pre-wrap;
     margin-top: 2vh;
     padding: 10px 5px 10px 10px;
@@ -89,4 +120,34 @@ body {
 
 .adminCard {
     background-color: lightblue;
+}
+
+@-webkit-keyframes scaleUp {
+    from {width: 200px;} 
+    to {width: 500px;}
+}
+
+@-webkit-keyframes scaleDown {
+    from {width: 500px;} 
+    to {width: 200px;}
+}
+
+@-webkit-keyframes widenCard {
+    from {width: 35vw;} 
+    to {width: 90vw;}
+}
+
+@-webkit-keyframes shrinkCard {
+    from {width: 90vw;} 
+    to {width: 35vw;}
+}
+
+@-webkit-keyframes leftToRight {
+    from {margin-left: 5vw;}
+    to {margin-left: 55vw;}
+}
+
+@-webkit-keyframes rightToLeft {
+    from {margin-left: 55vw;}
+    to {margin-left: 5vw;}
 }

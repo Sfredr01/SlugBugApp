@@ -17,7 +17,6 @@ function submitImage() {
         }
       if(fileInput !== null){
         sendMessage(object);
-        alert('Submitted');
       }
     }
     reader.readAsDataURL(fileInput);
@@ -26,10 +25,10 @@ function submitImage() {
 function sendMessage(image) {   
     var length; 
     firebase.database().ref('livefeed/').once('value')
-    .then(function(snapshot) {
+    .then((snapshot) => {
         var arrayOfImage = snapshot.val();
         return arrayOfImage;
-    }).then(function(arrayOfImage) {
+    }).then((arrayOfImage) => {
         if(arrayOfImage !== null) {
         length = arrayOfImage.length;
         } else { length = 0; }
@@ -39,9 +38,10 @@ function sendMessage(image) {
         user: sessionStorage.getItem('username'),
         image: image,
         points: 1,
+    }).then(() => {
+        alert('Submitted');
+        changePage('../index.html');  
     });
-    console.log('submitted!');
-    changePage('../index.html');
   });
 }
 

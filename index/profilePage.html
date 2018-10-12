@@ -26,10 +26,55 @@
     </head>
 
     <body>
-        <div id="backButtonDiv">
-            <button onclick="changePage('../index.html')">
-                <img id="backButton" src="../images/backButton.png" alt="backButton">
-            </button>
+        <div id="loadingDiv" style="display: flex; justify-content: center; margin-top: 20vh;">
+            <img src="../images/loadingImage.gif">
+        </div>
+        <div class="formPopup" id="myForm">
+                <div class="form-container">
+                    <button onclick="popupFadeOut()" style="float: right;">
+                        <img src="../images/transparentX.png" style="width: 5vw;">
+                    </button>
+                    <div>
+                        <input type="text" id="nameInput" class="input" placeholder="Name...">
+                    </div>
+                    <div>
+                        <input type="text" id="descInput" class="input " placeholder="Description...">
+                    </div>
+                    <div>
+                        <button onclick="document.getElementById('imgPicker').click()" id="profSelect" class="button">Select Profile Picture</button>
+                        <div id="profPic"></div>
+                        <button class="button" id="clearButton" onclick="clearImage()">Clear</button>
+                        <button class="button" id="submitButton">Submit</button>
+                        <input hidden type="file" accept="image/*" id="imgPicker" onchange="grabImage();">
+                    </div>
+                </div>
+            </div>
+        <div hidden id="mainBody">
+            <div id="header" style="margin-bottom: -3vh;">
+                <div>
+                    <button onclick="changePage('../index.html')">
+                        <img id="backButton" src="../images/backButton.png" alt="backButton">
+                    </button>
+                </div>
+                <div>
+                    <button onclick="popupFadeIn()" style="font-size: 10vw; margin-top: 1vh;">
+                        EDIT
+                    </button>
+                </div>
+            </div>
+            
+            <div>
+                <img src="../images/defaultProfilePicture.png" style="margin-left:25vw; margin-top: 5vh; width:50vw;">
+            </div>
+            <div id="username" style="font-size: 10vw; text-align: center;">
+                Username
+            </div>
+            <div id="name" style="font-size: 5vw; text-align: center;">
+                Name
+            </div>
+            <div id="desc" style="font-size: 3vw; margin-left: 5vw;">
+                Description:
+            </div>
         </div>
     </body>
 

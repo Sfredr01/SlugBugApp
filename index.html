@@ -8,26 +8,26 @@
         <script src="./scripts/script.js"></script>
         <meta name="viewport" content="user-scalable=no" />
     </head>
-    <body onload="checkLoginStatus()">
-        <h1 id="titleText">Slug Bug App</h1>
-        <div class="cardList horizontalFlex">
-            <div class="verticalFlex">
+    <body onload="checkLoginStatus();">
+        <div style="display:flex; flex-direction:row; overflow: hidden;">
+            <div id="sideBar">
+                <button onclick="closeSideBar();" style="float:right;">
+                    <img src="images/backButton.png" style="width: 10vw;">
+                </button>
+
                 <button onclick="changePage('messageStream.html')" class="card">
                     <div class="cardWords">
                         Live Feed
                     </div>
                 </button>
-                <button class="card">
-                    <div class="cardWords">
-                       Leaderboard (WIP)
-                    </div>
-                </button>
-            </div>
-
-            <div class="verticalFlex">
                 <button onclick="changePage('profilePage.html')" class="card">
                     <div class="cardWords">
-                        Profile (WIP)
+                        Profile
+                    </div>
+                </button>
+                <button class="card">
+                    <div class="cardWords">
+                    Leaderboard (WIP)
                     </div>
                 </button>
                 <button class="card">
@@ -35,16 +35,32 @@
                         Rules (WIP)
                     </div>
                 </button> 
+                <button class="card" onclick="changePage('submitPage.html')">
+                    <div class="cardWords">
+                        Submit Slug
+                    </div>
+                </button>
+                <div class="noClickCard">
+                    <div class="cardWords">
+                        Version: 0.0.1 (Alpha)
+                    </div>
+                </div>
             </div>
-        </div>
-        <button class="addButton" onclick="changePage('submitPage.html')">
-            <div class="cardWords">
-                Submit Slug
+
+            <div>
+                <div id="header">
+                    <div>
+                        <button onclick="openSideBar();">
+                            <img src="images/menu-icon.png" style="width: 10vw; margin-top: 3.5vh;">
+                        </button>
+                    </div>
+                    <div id="titleText">
+                        Slug Bug App
+                    </div>
+                </div>
+                <div id="gifImage"></div>
             </div>
-        </button>
-        <img id="mainImg" src="./images/beetle.png" alt="slugbug">
-        <div style="margin-left: 60vw; font-size: 2.5vw;">
-            Version: 0.0.1 (Alpha)
+
         </div>
     </body>
 </html>

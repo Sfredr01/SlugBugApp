@@ -1,12 +1,70 @@
 body {
-    background-color: grey;
+    background-color: #93BFC6;
+    margin: 0;
 }
 
-#backButtonDiv {
-    background-color: grey;
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #566e72;
     margin-bottom: -10px;
+    padding-bottom: 1vh;
 }
 
 #backButton {
     width: 15vw;
+}
+
+#clearButton , #submitButton {
+    display: none;
+}
+
+.formContainer {
+    padding: 10px;
+    background-color: white;
+}
+
+.formPopup {
+    min-height: 50vh;
+    min-width: 70vw;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 15vh;
+    left: 14vw;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    background-color: white;
+}
+
+.inputLabel {
+    margin-left: 5vw;
+    font-size: 3vw;
+}
+
+.button {
+    margin-left: 2vw; 
+    font-size: 5vw; 
+    border: solid black 3px;
+}
+
+.input {
+    margin-top: 2vh;
+    margin-left: 2vw;
+    border:solid black 3px;
+    height: 4vh;
+    width: 50vw;
+    font-size: 5vw;
+}
+
+@-webkit-keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 100;}
+}
+
+@-webkit-keyframes fadeOut {
+    from{opacity: 100;}
+    to{opacity: 0;}
 }

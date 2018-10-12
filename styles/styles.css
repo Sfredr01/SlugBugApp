@@ -2,23 +2,53 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    background-image: linear-gradient(lightblue, lightgreen);
+    background-color: #93BFC6;
+    overflow: hidden;
 }
 
 #titleText {
     text-align: center;
-    margin-top: 15vh;
-    margin-bottom: -2vh;
     font-size: 8vw;
-    border: black solid 5px;
-    padding-top: 1vh;
+    padding-top: 2vh;
     padding-bottom: 1vh;
-    background-image: linear-gradient(white, grey);
 }
 
-#mainImg {
-    margin-top: 6vh;
-    margin-left: 15vw;
+#sideBar {
+    position:absolute; 
+    background-color: grey; 
+    height: 100vh; 
+    width: 0vw; 
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #566e72;
+    padding-bottom: 2vh;
+    width: 100vw;
+}
+
+#gifImage {
+    position: absolute;
+    margin-top: 40vh;
+    background-image: url('../images/slugbugDriving.gif');
+    width: 80vw;
+    height: 35vh;
+}
+
+.noClickCard {
+    display: flex;
+    border: black solid 4px;
+    padding: 50px;
+    font-size: 1vw;
+    white-space: nowrap;
+    width: 89.5%;
+    justify-content: center;
+    background-image: linear-gradient(white, grey);
+    margin-left: 4vw;
 }
 
 .cardList {
@@ -41,39 +71,38 @@
     padding: 50px;
     font-size: 1vw;
     white-space: nowrap;
-    margin-left: 6vw;
-    margin-top: 7vw;
-    width: 35vw;
+    width: 89.5%;
     justify-content: center;
-    border-radius: 150px;
-    box-shadow: 10px 10px 5px grey;
     background-image: linear-gradient(white, grey);
+    margin-left: 4vw;
 }
 
 .card:active {
     background-image: linear-gradient(grey, grey);
 }
 
-.addButton {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-    border: black solid 4px;
-    font-size: 1vw;
-    white-space: nowrap;
-    border-radius: 150px;
-    box-shadow: 10px 10px 5px grey;
-    background-image: linear-gradient(white, grey);
-    margin-top: 3vh;
-    margin-left: 28vw;
-}
-
-.addButton:active {
-    background-image: linear-gradient(grey, grey);
-}
-
 .cardWords {
     justify-content: center;
     font-size: 3vw;
+    overflow: hidden;
 }
 
+@-webkit-keyframes carMovementAway{
+    from{left:0vw;}
+    to{left:110vw;}
+}
+
+@-webkit-keyframes carMovementBack{
+    from{left:-75vw;}
+    to{left:0vw;}
+}
+
+@-webkit-keyframes sideBarOpen{
+    from{width: 0vw;}
+    to{width: 70vw;}
+}
+
+@-webkit-keyframes sideBarClose{
+    from{width: 70vw;}
+    to{width: 0vw;}
+}
